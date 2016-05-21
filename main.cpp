@@ -19,7 +19,7 @@ int main(int argc, char *argv[])
   window.setWindowTitle("Browser");
   window.showMaximized();
 
-  url = QUrl("file:///home/ospf/Programming/ocelotbrowser/Home/ocelot.html");
+  url = QUrl("http://www.google.com");
   view->load(url);
   view->show();
 
@@ -42,8 +42,8 @@ int main(int argc, char *argv[])
   QObject::connect(forward, SIGNAL(activated()), view, SLOT(forward()));
 
 
-  QShortcut *home = new QShortcut(QKeySequence("Ctrl+w"), view);
-  QObject::connect(home, SIGNAL(activated()), view, SLOT(home()));
+  //QShortcut *home = new QShortcut(QKeySequence("Ctrl+w"), view);
+  //QObject::connect(home, SIGNAL(activated()), view, SLOT(home()));
 
     //QShortcut *speed_dial1 = new QShortcut(QKeySequence("Ctrl+a"), view);
     //QObject::connect(speed_dial1, SIGNAL(activated()), view, SLOT(load("http://qt-project.org/support/file.html")));
